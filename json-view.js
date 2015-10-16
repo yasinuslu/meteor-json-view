@@ -1,4 +1,8 @@
 // Write your package code here!
 Template.jsonView.onRendered(function () {
-  this.$('.json-view').JSONView(this.data.json || {}, this.data.options || {});
+  this.autorun(() => {
+    var json = this.view.lookup('json')();
+    var options = this.view.lookup('options')();
+    this.$('.json-view').JSONView(json || {}, options || {});
+  });
 });

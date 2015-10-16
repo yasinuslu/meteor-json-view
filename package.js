@@ -1,6 +1,6 @@
 Package.describe({
   name: 'yasinuslu:json-view',
-  version: '1.2.2',
+  version: '1.2.2-1',
   // Brief, one-line summary of the package.
   summary: 'jQuery JSONView packaged for meteor',
   // URL to the Git repository containing the source code for this package.
@@ -12,6 +12,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
+  api.use('ecmascript');
   api.use(['jquery', 'templating'], 'client');
   api.addFiles('jquery.jsonview.css', 'client');
   api.addFiles('jquery.jsonview.js', 'client');
